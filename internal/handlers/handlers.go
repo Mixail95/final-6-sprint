@@ -49,6 +49,6 @@ func Upload(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	fmt.Fprintf(w, "Результат конвертации:\n%s\n\nФайл сохранен как: %s", result, fileName)
+	fmt.Fprintf(w, "%s", result)
 
 }
