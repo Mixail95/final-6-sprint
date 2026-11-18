@@ -23,7 +23,7 @@ func Upload(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	file, header, err := r.FormFile("file")
+	file, header, err := r.FormFile("myFile")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
