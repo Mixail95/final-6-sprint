@@ -1,4 +1,3 @@
-
 package service
 
 import (
@@ -8,7 +7,7 @@ import (
 )
 
 func Convert(input string) (string, error) {
-	hasRussianLetters := strings.Contains(input, "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ")
+	hasRussianLetters := strings.ContainsAny(input, "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ")
 	if hasRussianLetters {
 		return morse.ToMorse(input), nil
 	}
